@@ -1,0 +1,410 @@
+@import url(https://fonts.googleapis.com/css2?family=Rampart+One&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Monoton&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Lobster&display=swap);
+
+@import "utilities/variables";
+@import "utilities/mapas";
+@import "utilities/mixin";
+@import "utilities/extend";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    header{
+        margin-bottom: 5rem;
+        div{
+            nav{
+                background:$menu-color;
+
+            }
+
+        }
+    }
+    main{
+        h1{
+            text-align: center;
+            font-family: $tipografia;
+            padding: 2rem;
+            
+        }
+        aside{
+            @extend %flex;
+            justify-content: space-around;
+            flex-direction: column;
+            div{
+                text-align: center;
+                b{
+                    font-family: 'Lobster', cursive;
+                    font-size: 2rem;
+                }
+                p{
+                    font-size: map-get($map: $textos, $key: texto-celu);
+                    margin: 1rem;
+                }
+                button{
+                    padding: 0.2rem 0.3rem;
+                    background-color: rgb(15, 129, 223);
+                    border-radius: 5px ;
+                    a{
+                    color: white;
+                    font-family: 'Lobster', cursive;
+                    font-size: 1rem;
+                    text-decoration: none;
+                    }     
+                }
+            }
+            img{
+                margin-bottom: 2rem;
+                width: 90%;
+            }
+           
+
+        }
+        section{
+            @include  grid;
+            grid-template-columns: auto;
+            grid-template-areas: 
+            "video-1"
+            "p-1"
+            "video-2"
+            "p-2"
+            ;   
+            .video-1{
+                grid-area: video-1;
+               
+            }
+            .video-1-table{
+                display: none;
+            }
+            .video-1-compu{
+                display: none;
+            }
+            .p-1{
+                grid-area: p-1;
+                margin: 1.5rem;
+            }
+            .video-2{
+                grid-area: video-2;
+            }
+            .video-2-table{
+                display: none;
+            }
+            .video-2-compu{
+                display: none;
+            }
+            .p-2{
+                grid-area: p-2;
+                margin: 1.5rem;
+            }
+        }
+        .p-nosotros{
+            font-size: map-get($map: $textos, $key:texto-celu);
+            
+        }
+        .h2-nosotros{
+            font-style: oblique;
+            text-decoration: underline;
+        
+        }
+        .div-ubi{
+            display: flex;
+            justify-content: center;
+        }
+
+        figure{
+            display: grid;
+            align-items: end;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            grid-template-areas:
+            "card-uno" 
+            "card-dos" 
+            "card-tres" 
+            "card-cuatro" 
+            "card-cinco" 
+            "card-seis" 
+            "card-siete" 
+            "card-ocho" 
+            "card-nueve" 
+            "card-diez" 
+            "card-once" 
+            ;
+
+            div{
+                @extend %flex;
+                flex-direction: column;
+                box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+                justify-items: center;
+                width: 15rem;
+                margin: 2rem;
+                img{
+                    width: 90%;
+                }
+                p{
+                    width: 100%;
+                    background-color: black;
+                    color: white;
+                    text-align: center;
+                }
+                
+            }
+        }
+
+    }
+    figure{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 70%;
+
+        }
+    }
+}
+        
+
+
+
+
+
+@media screen and (min-width:600px){
+    body{
+        main{
+            aside{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                
+                div{
+                    text-align: center;
+                    b{
+                        font-family: 'Lobster', cursive;
+                        font-size: 2rem;
+                    }
+                    p{
+                        margin: 1.5rem;
+                        font-size: map-get($map: $textos, $key:texto-table );
+                    }
+                    button{
+                        padding: 0.2rem 0.3rem;
+                        background-color: rgb(15, 129, 223);
+                        border-radius: 5px ;
+                        a{
+                        color: white;
+                        font-family: 'Lobster', cursive;
+                        font-size: 1rem;
+                        text-decoration: none;
+                        }     
+                    }
+                }
+            
+                img{
+                    margin-bottom: 2rem;
+                    width: 40%;
+                }
+            }
+            section{
+                @include grid;
+                align-items: center;
+                grid-template-columns: 1fr 0.8fr;
+                grid-template-rows: auto;
+                grid-template-areas: 
+                "video-1 p-1"
+                "p-2 video-2"
+                ;   
+                .video-1{
+                    grid-area: video-1;
+                   
+                }
+                .video-1-compu{
+                    display: none;
+                }
+                .p-1{
+                    grid-area: p-1;
+                    margin: 3rem 1rem;
+                    font-size: 1rem;
+                }
+                .video-2{
+                    grid-area: video-2;
+                }
+                .video-2-compu{
+                    display: none;
+                }
+                .p-2{
+                    grid-area: p-2;
+                    margin: 3rem 1rem;
+                    font-size: map-get($map: $textos, $key:texto-table);
+
+                }
+            }
+            .p-nosotros{
+                font-size: map-get($map: $textos, $key:texto-table);
+                
+            }
+            figure{
+                display: grid;
+                align-items: end;
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+                grid-template-areas:
+                "card-uno card-dos" 
+                "card-tres card-cuatro" 
+                "card-cinco card-seis" 
+                "card-siete card-ocho" 
+                "card-nueve card-diez" 
+                "card-once card-doce" 
+            ;
+                div{
+                    width: 15rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+                    justify-items: center;
+                    align-items: center;
+                    margin: 2rem;
+
+                    img{
+                        width: 90%;
+                    }
+                    p{
+                        width: 100%;
+                        background-color: black;
+                        color: white;
+                        text-align: center;
+        
+                    }
+                    
+                }
+            }
+        }
+        figure{
+            img{
+                width: 55%;
+    
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width:1080px){
+    body{
+        main{
+            aside{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                
+                div{
+                    text-align: center;
+                    b{
+                        font-family: 'Lobster', cursive;
+                        font-size: 2rem;
+                    }
+                    p{
+                        font-size: map-get($map: $textos, $key:texto-compu);
+                        margin: 1.5rem;
+                    }
+                    button{
+                        padding: 0.2rem 0.3rem;
+                        background-color: rgb(15, 129, 223);
+                        border-radius: 5px ;
+                        a{
+                        color: white;
+                        font-family: 'Lobster', cursive;
+                        font-size: 1rem;
+                        text-decoration: none;
+                        }     
+                    }
+                }
+            
+                img{
+                    margin-bottom: 2rem;
+                    width: 35%;
+                }
+            }
+            section{
+                @include grid;
+                align-items: center;
+                grid-template-columns: 1fr 0.8fr;
+                grid-template-rows: auto;
+                grid-template-areas: 
+                "video-1-compu p-1"
+                "p-2 video-2-compu"
+                ;   
+                .video-1{
+                    display: none;
+                }
+                .video-1-compu{
+                    grid-area: video-1-compu;
+                    display:grid;
+                }
+                
+                .p-1{
+                    grid-area: p-1;
+                    margin: 3rem 1.5rem;
+                    font-size: map-get($map: $textos, $key:texto-compu);
+                }
+                .video-2{
+                    display: none;   
+                }
+                .video-2-compu{
+                    grid-area: video-2-compu;
+                    display: grid;
+                }
+                .p-2{
+                    grid-area: p-2;
+                    margin: 3rem 1.5rem;
+                    font-size: map-get($map: $textos, $key:texto-compu);
+                }
+               
+            }
+            .p-nosotros{
+                font-size: map-get($map: $textos, $key:texto-compu);
+                
+            }
+            figure{
+              
+                grid-template-areas:
+                "card-uno card-dos card-tres"
+                "card-cuatro card-cinco card-seis" 
+                "card-siete card-ocho card-nueve"
+                "card-diez card-once card-doce" 
+                ;
+                div{
+                    width: 15rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+                    margin: 2rem;
+                    justify-items: center;
+                    align-items: center;
+
+                    img{
+                        width: 90%;
+                    }
+                    p{
+                        width: 100%;
+                        background-color: black;
+                        color: white;
+                        text-align: center;
+        
+                    }
+                    
+                }
+                
+            }
+        }
+
+    }
+}
+
+

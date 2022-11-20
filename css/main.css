@@ -1,0 +1,279 @@
+@import url(https://fonts.googleapis.com/css2?family=Rampart+One&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Monoton&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Lobster&display=swap);
+body main aside, body main figure div {
+  display: flex;
+  align-items: center; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none; }
+
+body header {
+  margin-bottom: 5rem; }
+  body header nav {
+    background: #51d1f6; }
+
+body main h1 {
+  text-align: center;
+  font-family: "Rampart One";
+  padding: 2rem; }
+
+body main aside {
+  justify-content: space-around;
+  flex-direction: column; }
+  body main aside div {
+    text-align: center; }
+    body main aside div b {
+      font-family: 'Lobster', cursive;
+      font-size: 2rem; }
+    body main aside div p {
+      font-size: 1rem;
+      margin: 1rem; }
+    body main aside div button {
+      padding: 0.2rem 0.3rem;
+      background-color: #0f81df;
+      border-radius: 5px; }
+      body main aside div button a {
+        color: white;
+        font-family: 'Lobster', cursive;
+        font-size: 1rem;
+        text-decoration: none; }
+  body main aside img {
+    margin-bottom: 2rem;
+    width: 90%; }
+
+body main section {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: auto;
+  grid-template-areas: "video-1"
+ "p-1"
+ "video-2"
+ "p-2"; }
+  body main section .video-1 {
+    grid-area: video-1; }
+  body main section .video-1-table {
+    display: none; }
+  body main section .video-1-compu {
+    display: none; }
+  body main section .p-1 {
+    grid-area: p-1;
+    margin: 1.5rem; }
+  body main section .video-2 {
+    grid-area: video-2; }
+  body main section .video-2-table {
+    display: none; }
+  body main section .video-2-compu {
+    display: none; }
+  body main section .p-2 {
+    grid-area: p-2;
+    margin: 1.5rem; }
+
+body main .p-nosotros {
+  font-size: 1rem; }
+
+body main .h2-nosotros {
+  font-style: oblique;
+  text-decoration: underline; }
+
+body main .div-ubi {
+  display: flex;
+  justify-content: center; }
+
+body main figure {
+  display: grid;
+  align-items: end;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "card-uno" 
+ "card-dos" 
+ "card-tres" 
+ "card-cuatro" 
+ "card-cinco" 
+ "card-seis" 
+ "card-siete" 
+ "card-ocho" 
+ "card-nueve" 
+ "card-diez" 
+ "card-once"; }
+  body main figure div {
+    flex-direction: column;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    justify-items: center;
+    width: 15rem;
+    margin: 2rem; }
+    body main figure div img {
+      width: 90%; }
+    body main figure div p {
+      width: 100%;
+      background-color: black;
+      color: white;
+      text-align: center; }
+
+body figure {
+  display: flex;
+  justify-content: center; }
+  body figure img {
+    width: 70%; }
+
+@media screen and (min-width: 600px) {
+  body main aside {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around; }
+    body main aside div {
+      text-align: center; }
+      body main aside div b {
+        font-family: 'Lobster', cursive;
+        font-size: 2rem; }
+      body main aside div p {
+        margin: 1.5rem;
+        font-size: 1.1rem; }
+      body main aside div button {
+        padding: 0.2rem 0.3rem;
+        background-color: #0f81df;
+        border-radius: 5px; }
+        body main aside div button a {
+          color: white;
+          font-family: 'Lobster', cursive;
+          font-size: 1rem;
+          text-decoration: none; }
+    body main aside img {
+      margin-bottom: 2rem;
+      width: 40%; }
+  body main section {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 0.8fr;
+    grid-template-rows: auto;
+    grid-template-areas: "video-1 p-1"
+ "p-2 video-2"; }
+    body main section .video-1 {
+      grid-area: video-1; }
+    body main section .video-1-compu {
+      display: none; }
+    body main section .p-1 {
+      grid-area: p-1;
+      margin: 3rem 1rem;
+      font-size: 1rem; }
+    body main section .video-2 {
+      grid-area: video-2; }
+    body main section .video-2-compu {
+      display: none; }
+    body main section .p-2 {
+      grid-area: p-2;
+      margin: 3rem 1rem;
+      font-size: 1.1rem; }
+  body main .p-nosotros {
+    font-size: 1.1rem; }
+  body main figure {
+    display: grid;
+    align-items: end;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "card-uno card-dos" 
+ "card-tres card-cuatro" 
+ "card-cinco card-seis" 
+ "card-siete card-ocho" 
+ "card-nueve card-diez" 
+ "card-once card-doce"; }
+    body main figure div {
+      width: 15rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+      justify-items: center;
+      align-items: center;
+      margin: 2rem; }
+      body main figure div img {
+        width: 90%; }
+      body main figure div p {
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center; }
+  body figure img {
+    width: 55%; } }
+
+@media screen and (min-width: 1080px) {
+  body main aside {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around; }
+    body main aside div {
+      text-align: center; }
+      body main aside div b {
+        font-family: 'Lobster', cursive;
+        font-size: 2rem; }
+      body main aside div p {
+        font-size: 1.2rem;
+        margin: 1.5rem; }
+      body main aside div button {
+        padding: 0.2rem 0.3rem;
+        background-color: #0f81df;
+        border-radius: 5px; }
+        body main aside div button a {
+          color: white;
+          font-family: 'Lobster', cursive;
+          font-size: 1rem;
+          text-decoration: none; }
+    body main aside img {
+      margin-bottom: 2rem;
+      width: 35%; }
+  body main section {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 0.8fr;
+    grid-template-rows: auto;
+    grid-template-areas: "video-1-compu p-1"
+ "p-2 video-2-compu"; }
+    body main section .video-1 {
+      display: none; }
+    body main section .video-1-compu {
+      grid-area: video-1-compu;
+      display: grid; }
+    body main section .p-1 {
+      grid-area: p-1;
+      margin: 3rem 1.5rem;
+      font-size: 1.2rem; }
+    body main section .video-2 {
+      display: none; }
+    body main section .video-2-compu {
+      grid-area: video-2-compu;
+      display: grid; }
+    body main section .p-2 {
+      grid-area: p-2;
+      margin: 3rem 1.5rem;
+      font-size: 1.2rem; }
+  body main .p-nosotros {
+    font-size: 1.2rem; }
+  body main figure {
+    grid-template-areas: "card-uno card-dos card-tres"
+ "card-cuatro card-cinco card-seis" 
+ "card-siete card-ocho card-nueve"
+ "card-diez card-once card-doce"; }
+    body main figure div {
+      width: 15rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+      margin: 2rem;
+      justify-items: center;
+      align-items: center; }
+      body main figure div img {
+        width: 90%; }
+      body main figure div p {
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center; } }

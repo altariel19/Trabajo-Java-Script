@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En está página encontrarás nuestros productos">
+    <meta name="keywords" content="productos, computacion, repuestos">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
+    
+
+    <title>Ariel Computacion - Productos</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg  menu">
+<div class="container-fluid">
+<a class="navbar-brand" href="../index.html"><img src="../img/logo.jpg" alt="la imagen del logo de casa de computacion"></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="productos.html">Productos</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Otros
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="servicios.html">Servicios</a></li>
+        <li><a class="dropdown-item" href="nosotros.html">Nosotros</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="consultas.html">Consultas</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled"></a>
+    </li>
+  </ul>
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+    <button class="btn btn-outline-success" type="submit">Buscar</button>
+  </form>
+</div>
+</div>
+</nav>
+</header>
+    <main class="container">
+      <div class="row"><h1 class="h1">Productos</h1></div>
+     
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../img/micro-amd.jpg" class="d-block w-100" alt="Imagen de micro amd">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/micro-intel.jpg" class="d-block w-100" alt="Imagen de micro intel">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/placa-amd.jpg" class="d-block w-100" alt="Imagen de placa base amd">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/placa-intel.jpg" class="d-block w-100" alt="Imagen de placa base intel">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/disco.jpg" class="d-block w-100" alt="Imagen de disco duro comun">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/disco2.jpg" class="d-block w-100" alt="Imagen de disco duro solido">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/video2.jpg" class="d-block w-100" alt="Imagen de placa aceleradora">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/gabi.jpg" class="d-block w-100" alt="Imagen de gabinete negro">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/gabi2.jpg" class="d-block w-100" alt="imagen de gabinete blanco">
+          </div>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+
+      
+
+
+
+      <div class="container">
+        <h4>Carrito de compras</h4>
+        <h4>Productos</h4>
+        <div class="row" id="cards"></div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Acción</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody id="items"></tbody>
+            <tfoot>
+                <tr id="footer">
+                    <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <template id="template-footer">
+        <th scope="row" colspan="2">Total productos</th>
+        <td>10</td>
+        <td>
+            <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                vaciar todo
+            </button>
+        </td>
+        <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
+
+    <template id="template-carrito">
+      <tr>
+        <th scope="row">id</th>
+        <td>banana</td>
+        <td>1</td>
+        <td>
+            <button class="btn btn-info btn-sm">
+                +
+            </button>
+            <button class="btn btn-danger btn-sm">
+                -
+            </button>
+        </td>
+        <td>$ <span>500</span></td>
+      </tr>
+    </template>
+
+    <template id="template-card">
+      <div class="col-lg-4 mb-4 align-items-stretch">
+        <div class="card h-100">
+            <img src="" alt="" class="card-img-top" style="width: auto; height: 500px;">
+          <div class="card-body">
+            <h5>Titulo</h5>
+            <p>precio</p>
+            <button class="btn btn-dark">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </template>
+
+
+
+
+
+    </main>
+    <div class="container-fluid">
+      <footer class="container-fluid d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="../index.html" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"><img src="../img/logo2.jpg" alt="Imagen del logo de footer">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+        </div>
+    
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-muted" href="https://www.whatsapp.com/?lang=es" target="_blank"><img src="../img/whatsapp.jpg" alt="Logo de whatsapp"><img src="" alt=""><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="https://es-la.facebook.com/" target="_blank"><img src="../img/face.jpg" alt="Logo de Facebook"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/" target="_blank"><img src="../img/insta.jpg" alt="Logo de Instagram"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+        </ul>
+      </footer>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/producto.js"></script>
+    <script src="../js/JavaScript.js"></script>
+  </body>  
+    
+</html>
